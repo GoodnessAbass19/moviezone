@@ -196,7 +196,7 @@ const Navbar = () => {
               />
             )}
           </div>
-          <Link href={"/"} className="">
+          <Link href={"/"} className="basis-4/5 text-center">
             <h2 className="inline-block text-3xl font-semibold head capitalize text-center">
               MovieZone
             </h2>
