@@ -6,12 +6,19 @@ import Image from "next/image";
 
 export async function generateStaticParams() {
   const data = await fetch(
-    `https://api.themoviedb.org/3/tv/popular?api_key=${process.env.API_KEY}`
+    `https://api.themoviedb.org/3/tv/popular?api_key=${process.env.NEXT_PUBLIC_API_KEY}`
   );
   const res = await data.json();
 
+  if (!res || !Array.isArray(res.results)) {
+    // Handle the case where the response or results are not as expected
+    return [];
+  }
+
   return res.results.map((movie) => ({
-    movie: toString(movie.id),
+    params: {
+      movie: String(movie.id),
+    },
   }));
 }
 

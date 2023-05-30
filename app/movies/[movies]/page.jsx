@@ -11,13 +11,15 @@ export async function generateStaticParams() {
   );
   const res = await data.json();
 
-  if (!Array.isArray(res.results)) {
-    // Handle the case where res.results is not an array, e.g., an empty response or unexpected data structure
+  if (!res || !Array.isArray(res.results)) {
+    // Handle the case where the response or results are not as expected
     return [];
   }
 
   return res.results.map((movie) => ({
-    movie: String(movie.id),
+    params: {
+      movie: String(movie.id),
+    },
   }));
 }
 
