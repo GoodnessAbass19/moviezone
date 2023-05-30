@@ -175,50 +175,6 @@ const Navbar = () => {
                 </Link>
               </button>
             </div>
-
-            {session ? (
-              <button
-                // onClick={() => signOut()}
-                onClick={drop_1}
-                className="text-xl flex justify-center items-center capitalize font-semibold"
-              >
-                <Image
-                  src={session.user.image}
-                  width={300}
-                  height={300}
-                  alt={session.user.name}
-                  className="rounded-full w-10 h-10"
-                  priority
-                />
-
-                <span className="text-base font-normal">
-                  {arrow ? (
-                    <ChevronUpIcon width={18} />
-                  ) : (
-                    <ChevronDownIcon width={18} />
-                  )}
-                  {arrow && (
-                    <div className=" absolute z-[999] top-20 lg:top-20 bg-white p-3 lg:p-5 rounded-md flex flex-col gap-y-5 right-6 lg:right-10">
-                      <button
-                        onClick={() => signOut()}
-                        className="text-black font-semibold flex justify-center"
-                      >
-                        <ArrowRightOnRectangleIcon className="w-5 h-5 text-xl" />
-                        Sign-out
-                      </button>
-                    </div>
-                  )}
-                </span>
-              </button>
-            ) : (
-              <button
-                onClick={() => signIn()}
-                className="text-xl inline-block capitalize font-semibold"
-              >
-                <UserCircleIcon className="w-10 h-10 inline-block text-black" />
-                <span className="text-lg font-normal">Login</span>
-              </button>
-            )}
           </div>
         </div>
       </div>
@@ -245,47 +201,6 @@ const Navbar = () => {
               MovieZone
             </h2>
           </Link>
-          {session ? (
-            <button
-              onClick={drop_1}
-              className="text-xl flex justify-end items-center capitalize font-semibold"
-            >
-              <Image
-                src={session.user.image}
-                width={300}
-                height={300}
-                alt={session.user.name}
-                className="rounded-full w-6 h-6"
-                priority
-              />
-              <span className="text-base font-normal text-black">
-                {arrow ? (
-                  <ChevronUpIcon width={18} />
-                ) : (
-                  <ChevronDownIcon width={18} />
-                )}
-                {arrow && (
-                  <div className=" absolute z-[999] top-10 bg-black p-3 lg:p-5 rounded-md flex flex-col gap-y-5 right-2.5">
-                    <button
-                      onClick={() => signOut()}
-                      className="text-white font-semibold flex justify-center"
-                    >
-                      <ArrowRightOnRectangleIcon className="w-6 h-6 text-xl" />
-                      Sign-out
-                    </button>
-                  </div>
-                )}
-              </span>
-            </button>
-          ) : (
-            <button
-              onClick={() => signIn()}
-              className="text-xl inline-block capitalize font-semibold text-black"
-            >
-              <UserCircleIcon className="w-5 h-5 inline-block text-black" />
-              <span className="text-lg font-normal">Sign-in</span>
-            </button>
-          )}
         </div>
         <div className="flex justify-center items-center py-2.5">
           <div className="flex items-center justify-end text-black">
