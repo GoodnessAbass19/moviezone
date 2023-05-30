@@ -37,11 +37,11 @@ const TvShowsDetails = async ({ params }) => {
   const { id } = params;
   const imagePath = "https://image.tmdb.org/t/p/original";
   const data = await fetch(
-    `https://api.themoviedb.org/3/tv/${id}?api_key=${process.env.API_KEY}&append_to_response=images`
+    `https://api.themoviedb.org/3/tv/${id}?api_key=${process.env.NEXT_PUBLIC_API_KEY}&append_to_response=images`
   );
   const movie = await data.json();
   const res = await fetch(
-    `https://api.themoviedb.org/3/tv/${id}/aggregate_credits?api_key=${process.env.API_KEY}`
+    `https://api.themoviedb.org/3/tv/${id}/aggregate_credits?api_key=${process.env.NEXT_PUBLIC_API_KEY}`
   );
   const req = await res.json();
 

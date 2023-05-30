@@ -5,10 +5,6 @@ import Movie from "./Movie";
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 const Similar = ({ movies }) => {
-  // const req = await fetch(
-  //   `https://api.themoviedb.org/3/tv/${movies}/similar?api_key=${process.env.API_KEY}`
-  // );
-  // const res = await req.json();
   const { data, isLoading } = useSWR(
     `https://api.themoviedb.org/3/movie/${movies}/similar?api_key=${process.env.NEXT_PUBLIC_API_KEY}`,
     fetcher
