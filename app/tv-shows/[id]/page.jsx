@@ -96,9 +96,6 @@ const TvShowsDetails = async ({ params }) => {
               </div>{" "}
               <p className="text-xl font-normal font-montserrat text-gray-400">
                 {movie.tagline}{" "}
-                <span className="uppercase border-2 text-sm p-[2px] text-center text-white">
-                  {movie.spoken_languages[0].iso_639_1}
-                </span>
               </p>
               <div className="flex gap-10 items-center">
                 <Tvideo movies={films} />
@@ -202,9 +199,6 @@ const TvShowsDetails = async ({ params }) => {
           </div>
           <p className="text-xl font-normal font-montserrat text-gray-400">
             {movie.tagline}{" "}
-            <span className="uppercase border-2 text-sm p-[2px] text-center text-white">
-              {movie.spoken_languages[0].iso_639_1}
-            </span>
           </p>
           <div className="flex gap-10 items-center justify-center">
             <Tvideo movies={id} />
