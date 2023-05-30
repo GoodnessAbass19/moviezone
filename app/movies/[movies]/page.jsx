@@ -1,4 +1,3 @@
-// 'use client'
 import Images from "@/components/Image";
 import Cast from "@/components/Movies/Cast";
 import Similar from "@/components/Movies/Similar";
