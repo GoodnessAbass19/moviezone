@@ -110,7 +110,9 @@ const page = async ({ params }) => {
                 <h3 className="bg-green-500 font-semibold text-white rounded-md p-1.5">
                   {movie.status}
                 </h3>
-                <h3 className="text-lg font-semibold">User-rating: {result}</h3>
+                <h3 className="text-lg font-semibold">
+                  Viewers-rating: {result}
+                </h3>
                 <button className="text-xl font-semibold capitalize bg-green-500 p-2 text-white rounded-md">
                   <Link href={`https://www.imdb.com/title/${movie.imdb_id}`}>
                     check on imdb
@@ -215,13 +217,13 @@ const page = async ({ params }) => {
           <p className="text-xl font-normal font-montserrat text-gray-400">
             {movie.tagline}{" "}
           </p>
-          <div className="flex gap-6 md:gap-10 items-center justify-center flex-wrap">
+          <div className="flex gap-5 md:gap-10 items-center justify-center flex-wrap">
             <Video movies={films} />
             <h3 className="bg-green-500 font-semibold text-white rounded-md p-1.5">
               {movie.status}
             </h3>
             <h3 className="md:text-lg text-base font-semibold">
-              User-rating: {result}
+              Viewers-rating: {result}
             </h3>
             <button className="md:text-xl text-base font-semibold capitalize bg-green-500 md:p-2 p-1.5 text-white rounded-md">
               <Link href={`https://www.imdb.com/title/${movie.imdb_id}`}>

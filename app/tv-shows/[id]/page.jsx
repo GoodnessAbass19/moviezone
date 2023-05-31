@@ -102,7 +102,9 @@ const TvShowsDetails = async ({ params }) => {
                 <h3 className="bg-green-500 font-semibold text-white rounded-md p-1.5">
                   {movie.status}
                 </h3>
-                <h3 className="text-lg font-semibold">User-rating: {result}</h3>
+                <h3 className="text-lg font-semibold">
+                  Viewers-rating: {result}
+                </h3>
               </div>
             </div>
             <div className="row-span-2 col-span-2 space-y-5">
@@ -200,13 +202,13 @@ const TvShowsDetails = async ({ params }) => {
           <p className="text-xl font-normal font-montserrat text-gray-400">
             {movie.tagline}{" "}
           </p>
-          <div className="flex gap-10 items-center justify-center">
+          <div className="flex gap-5 md:gap-10 items-center justify-center">
             <Tvideo movies={id} />
             <h3 className="bg-green-500 md:text-lg font-semibold text-white rounded-md p-1.5">
               {movie.status}
             </h3>
             <h3 className="md:text-lg text-base font-semibold">
-              User-rating: {result}
+              Viewers-rating: {result}
             </h3>
           </div>
 
