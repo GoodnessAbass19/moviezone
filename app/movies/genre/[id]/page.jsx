@@ -15,7 +15,6 @@ const Genres = ({ params }) => {
     fetcher
   );
 
-  console.log(data);
   const handlePageChange = (newPage) => {
     setPage(newPage);
   };
