@@ -30,7 +30,7 @@ const TvSimilar = ({ movies }) => {
 
   return (
     data && (
-      <div className="pt-20 lg:m-20 md:m-15 m-10">
+      <div className="pt-20 lg:m-20 md:m-15 m-5">
         <h2 className="capitalize text-3xl font-semibold">you may also like</h2>
         <div className="grid lg:grid-cols-fluid md:grid-cols-4 grid-cols-2 py-10 md:gap-10 gap-5 mx-auto">
           {data.results.map((item) => (

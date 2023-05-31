@@ -26,7 +26,7 @@ const TvSearch = ({ id, page }) => {
     );
   return (
     data && (
-      <div className="max-w-full lg:m-20 md:m-15 m-10">
+      <div className="max-w-full lg:m-20 md:m-15 m-5">
         <h2 className="text-2xl font-semibold pt-10">Tv-Shows results</h2>
         <div className="grid lg:grid-cols-fluid md:grid-cols-4 grid-cols-2 py-10 md:gap-10 gap-5 mx-auto">
           {data.results.map((item) => (
