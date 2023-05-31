@@ -105,7 +105,10 @@ const Genres = ({ params }) => {
         {Array(20)
           .fill(1)
           .map((item, idx) => (
-            <div className="animate-pulse lg:h-[300px] h-[400px] col-span-2 sm:col-span-1 lg:col-span-2 bg-[#312e81]" />
+            <div
+              key={idx}
+              className="animate-pulse lg:h-[300px] h-[400px] col-span-2 sm:col-span-1 lg:col-span-2 bg-[#312e81]"
+            />
           ))}
       </div>
     );
