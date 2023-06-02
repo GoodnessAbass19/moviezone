@@ -12,11 +12,12 @@ import {
 } from "@heroicons/react/24/solid";
 import { useRef, useState } from "react";
 import { useSession, signIn, signOut } from "next-auth/react";
-import Image from "next/image";
+import { useRouter } from "next/navigation";
 import Genre from "./Movies/Genre";
 
 const Navbar = () => {
   const { data: session } = useSession();
+  const router = useRouter();
   const [arrowMenu, setArrowMenu] = useState(false);
   const [arrowUp, setArrowUp] = useState(false);
   const [arrow, setArrow] = useState(false);
@@ -170,9 +171,9 @@ const Navbar = () => {
                 onClick={() => (ref.current.value = "")}
                 className="bg-blue-600 rounded-full  lg:p-2.5 p-1 absolute inline-block"
               >
-                <Link href={`/search/${query}`}>
+                <div onClick={() => router.push(`/search/${query}`)}>
                   <MagnifyingGlassIcon className="w-7 h-7" />
-                </Link>
+                </div>
               </button>
             </div>
           </div>
@@ -216,9 +217,9 @@ const Navbar = () => {
               onClick={() => (targetRef.current.value = "")}
               className="bg-blue-600 rounded-full  lg:p-2.5 p-1.5 absolute inline-block"
             >
-              <Link href={`/search/${query}`}>
+              <div onClick={() => router.push(`/search/${query}`)}>
                 <MagnifyingGlassIcon className="w-5 h-5 text-black" />
-              </Link>
+              </div>
             </button>
           </div>
         </div>
