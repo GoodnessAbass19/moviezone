@@ -203,7 +203,7 @@ const TvShowsDetails = async ({ params }) => {
             {movie.tagline}{" "}
           </p>
           <div className="flex gap-5 md:gap-10 items-center justify-center">
-            <Tvideo movies={id} />
+            <Tvideo movies={films} />
             <h3 className="bg-green-500 md:text-lg font-semibold text-white rounded-md p-1.5">
               {movie.status}
             </h3>
