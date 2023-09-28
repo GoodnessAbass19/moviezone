@@ -14,9 +14,12 @@ import { useRef, useState } from "react";
 import { useSession, signIn, signOut } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import Genre from "./Movies/Genre";
+import Image from "next/image";
 
 const Navbar = () => {
-  const { data: session } = useSession();
+  // const { data: session } = useSession();
+
+  const ImageUrl = "https://lh3.googleusercontent.com/a";
   const router = useRouter();
   const [arrowMenu, setArrowMenu] = useState(false);
   const [arrowUp, setArrowUp] = useState(false);
@@ -176,6 +179,30 @@ const Navbar = () => {
                 </div>
               </button>
             </div>
+
+            {/* <div>
+              {session ? (
+                <button
+                  onClick={() => signOut()}
+                  className="bg-green-500 text-xl font-medium rounded-lg p-2.5"
+                >
+                  <Image
+                    width={50}
+                    height={50}
+                    alt={session.user.name}
+                    src={session.user.image}
+                    className="rounded-full object-cover"
+                  />
+                </button>
+              ) : (
+                <button
+                  onClick={() => signIn()}
+                  className="bg-green-500 text-xl font-medium rounded-lg p-2.5"
+                >
+                  sign In
+                </button>
+              )}
+            </div> */}
           </div>
         </div>
       </div>

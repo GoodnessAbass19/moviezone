@@ -3,9 +3,10 @@ import Image from "next/image";
 // import React from "react";
 // import Swiper core and required modules
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Scrollbar } from "swiper";
+import { FreeMode, Scrollbar } from "swiper";
 import "swiper/css";
 import "swiper/css/scrollbar";
+import "swiper/css/free-mode";
 import Link from "next/link";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
 
@@ -36,11 +37,12 @@ const Cast = ({ cast }) => {
             spaceBetween: 30,
           },
         }}
+        freeMode={true}
         grabCursor={true}
         keyboard={{
           enabled: true,
         }}
-        modules={[Scrollbar]}
+        modules={[Scrollbar, FreeMode]}
         className="max-w-screen-lg mx-auto md:py-10 py-5 mySwiper mt-5"
       >
         {cast.cast.slice(0, 10).map((item) => (

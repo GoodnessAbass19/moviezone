@@ -14,7 +14,7 @@ const HomeBar = () => {
         <button>
           <Link
             onClick={() => setClick(!click)}
-            href={`home`}
+            href={`/home`}
             className={`bg-blue-500 text-white flex text-lg font-semibold items-center p-2 rounded-md ${
               click ? "bg-inherit" : "bg-blue-500"
             }`}
@@ -28,7 +28,7 @@ const HomeBar = () => {
         <button>
           <Link
             onClick={() => setClick(!click)}
-            href={`home/trending-tv`}
+            href={`/home/trending-tv`}
             className={` text-white text-lg flex font-semibold items-center p-2 rounded-md ${
               click ? "bg-blue-500" : "bg-inherit"
             }`}
