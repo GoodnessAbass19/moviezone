@@ -7,7 +7,7 @@ const Movie = ({ title, poster_path, release_date, id, vote }) => {
   return (
     <div key={id}>
       <Link
-        href={`movies/${id}-${title}`}
+        href={`/movies/${id}-${title}`}
         className="brightness-90 hover:brightness-105"
       >
         <Image

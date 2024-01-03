@@ -17,7 +17,7 @@ import Genre from "./Movies/Genre";
 import Image from "next/image";
 
 const Navbar = () => {
-  // const { data: session } = useSession();
+  const { data: session } = useSession();
 
   const ImageUrl = "https://lh3.googleusercontent.com/a";
   const router = useRouter();
@@ -72,25 +72,25 @@ const Navbar = () => {
                 {arrowUp && (
                   <div className=" absolute z-[999] top-20 bg-black p-5 rounded-md flex flex-col gap-y-5">
                     <Link
-                      href="movies"
+                      href="/movies"
                       className=" text-white hover:border-b-2 hover:border-b-cyan-500"
                     >
                       Popular
                     </Link>
                     <Link
-                      href="movies/now-playing"
+                      href="/movies/now-playing"
                       className=" text-white hover:border-b-2 hover:border-b-cyan-500"
                     >
                       Now Playing
                     </Link>
                     <Link
-                      href="movies/upcoming"
+                      href="/movies/upcoming"
                       className=" text-white hover:border-b-2 hover:border-b-cyan-500"
                     >
                       Upcoming
                     </Link>
                     <Link
-                      href="movies/top-rated"
+                      href="/movies/top-rated"
                       className=" text-white hover:border-b-2 hover:border-b-cyan-500"
                     >
                       Top Rated
@@ -114,25 +114,25 @@ const Navbar = () => {
                 {arrowMenu && (
                   <div className=" absolute z-[999] top-20 bg-black p-5 rounded-md flex flex-col gap-y-5">
                     <Link
-                      href="tv-shows"
+                      href="/tv-shows"
                       className=" text-white hover:border-b-2 hover:border-b-cyan-500"
                     >
                       Popular
                     </Link>
                     <Link
-                      href="tv-shows/airing-today"
+                      href="/tv-shows/airing-today"
                       className=" text-white hover:border-b-2 hover:border-b-cyan-500"
                     >
                       Airing Today
                     </Link>
                     <Link
-                      href="tv-shows/on-the-air"
+                      href="/tv-shows/on-the-air"
                       className=" text-white hover:border-b-2 hover:border-b-cyan-500"
                     >
                       On Air
                     </Link>
                     <Link
-                      href="tv-shows/top-rated"
+                      href="/tv-shows/top-rated"
                       className=" text-white hover:border-b-2 hover:border-b-cyan-500"
                     >
                       Top Rated
