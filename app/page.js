@@ -5,8 +5,8 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main
-      style={{ backgroundImage: `url(/Sci-Fi-Movies.jpg)` }}
-      className="max-w-full mx-auto mt-5  bg-center bg-cover bg-blend-screen h-screen"
+      // style={{ backgroundImage: `url(/Sci-Fi-Movies.jpg)` }}
+      className="max-w-full mx-auto mt-5  bg-center bg-cover bg-blend-screen h-[100vh] bg-background"
     >
       <div className="w-full bg-black/50 absolute h-screen"></div>
 

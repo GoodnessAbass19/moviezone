@@ -53,7 +53,7 @@ const Navbar = () => {
           </Link>
           <ul className="flex flex-row gap-3  lg:gap-12 md:text-xl text-base justify-between items-center">
             <li className="text-black hover:border-b-2 border-cyan-500 px-1 text-center md:text-xl text-base">
-              <Link href={"/"} className="active:text-red-500">
+              <Link href={"/home"} className="active:text-red-500">
                 Home
               </Link>
             </li>
