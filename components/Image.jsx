@@ -52,7 +52,7 @@ const Images = ({ pics }) => {
               className="max-w-screen-md xl:h-[600px] lg:h-[500px] flex flex-col justify-center items-center"
             >
               {pics.slice(0, 20).map((img) => (
-                <SwiperSlide>
+                <SwiperSlide key={img.width}>
                   <Image
                     src={imagePath + img.file_path}
                     width={500}

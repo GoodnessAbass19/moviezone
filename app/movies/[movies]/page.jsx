@@ -63,9 +63,9 @@ const page = async ({ params }) => {
       <div className="w-full xl:block hidden">
         <div
           style={{ backgroundImage: `url(${imagePath + movie.backdrop_path})` }}
-          className="bg-contain bg-right-top bg-no-repeat flex flex-col w-full min-h-[70vh] space-y-20 justify-center items-center"
+          className="bg-cover bg-right-top bg-no-repeat flex flex-col w-full min-h-[70vh] space-y-20 justify-center items-center"
         >
-          <div className=" bg-indigo-800/80 w-full min-h-[70vh]"></div>
+          <div className=" bg-black/30 w-full min-h-[70vh]"></div>
           <div className="max-w-screen-xl mx-auto mt-20 absolute grid grid-rows-3 grid-flow-col gap-5 justify-between items-center py-20 px-5">
             <div className="row-span-3 relative rounded-md mb-8">
               <div>
@@ -102,7 +102,7 @@ const page = async ({ params }) => {
                   {toHoursAndMinutes(movie.runtime)}
                 </h4>
               </div>
-              <p className="text-xl font-normal font-montserrat text-gray-400">
+              <p className="text-xl font-normal font-montserrat text-white">
                 {movie.tagline}{" "}
               </p>
               <div className="flex gap-10 items-center">
